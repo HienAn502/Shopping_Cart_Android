@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/styles/style.css}"/>
+    <title>Employee Management</title>
+</head>
+<body>
+<div th:fragment="topNavigation(currentlocation)" class="navbar">
+    <nav>
+        <div class="nav-container">
+            <a th:href="'/'" th:text="'Home'"></a>
+            <a th:href="'/list'" th:text="'Employee List'"></a>
+            <a th:href="'/logout'" th:text="'Logout'"></a>
+        </div>
+    </nav>
+</div>
+<header>
+    <h1>Employee Management</h1>
+</header>
+
+<div layout:fragment="content">
+
+    <h1>Hello</h1>
+
+<!--    <table class="container">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>Id</th>-->
+<!--            <th>Name</th>-->
+<!--            <th>Age</th>-->
+<!--            <th>Address</th>-->
+<!--            <th>Image</th>-->
+<!--            <th></th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr th:each="employee : ${employees}">-->
+<!--            <td><a th:href="@{/employee(id=${employee.id})}" th:text="${employee.id}"></a></td>-->
+<!--            <td><a th:href="@{/employee(id=${employee.id})}" th:text="${employee.name}"></a></td>-->
+<!--            <td><a th:href="@{/employee(id=${employee.id})}" th:text="${employee.age}"></a></td>-->
+<!--            <td><a th:href="@{/employee(id=${employee.id})}" th:text="${employee.address}"></a></td>-->
+<!--            <td>-->
+<!--                <a th:href="@{${employee.image}}">-->
+<!--                    <img th:src="${employee.image}" height="100px">-->
+<!--                </a>-->
+
+<!--            </td>-->
+<!--            <td class="action">-->
+<!--                <button class="edit-btn" th:onclick="|location.href='@{/edit(id=${employee.id})}'|">Edit</button>-->
+<!--                <button class="fa fa-trash trash-btn" th:onclick="|location.href='@{/delete(id=${employee.id})}'|"></button>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--    <button class="add-btn" onclick="location.href='/add'">-->
+<!--        <i class="fas fa-plus-circle fa-lg"></i>-->
+<!--    </button>-->
+
+</div>
+</body>
+</html>
